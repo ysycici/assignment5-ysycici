@@ -24,7 +24,7 @@ hist(D1$score)
 
 #Create a categorical outcome variable based on student score to advise teacher using an "ifelse" statement
 ```{r}
-D1$advice <- ifelse(D7$score <=0.4, "intervene", ifelse(D7$score > 0.4 & D7$score <=0.8, "monitor", "no action"))
+D1$advice <- ifelse(D1$score <=0.4, "intervene", ifelse(D1$score > 0.4 & D1$score <=0.8, "monitor", "no action"))
 ```
 
 #Build a decision tree that predicts "advice" based on how many problems students have answered before, the percentage of those problems they got correct and how many hints they required
