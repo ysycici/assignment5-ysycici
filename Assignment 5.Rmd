@@ -59,4 +59,16 @@ plot(score_ctree)
 Please interpret the tree, which two behaviors do you think the teacher should most closely pay attemtion to?
 
 #Test Tree
-Upload the data "intelligent_tutor_new.csv" and use the predict function (D2$prediction <- predict(score_ctree, D2)) to predict the assignments of the new data set. What is the error rate on your predictions of the new data? 
+Upload the data "intelligent_tutor_new.csv". This is a data set of a differnt sample of students doing the same problems in the same system. We can use the tree we built for the previous data set to try to predict the "advice" we should give the teacher about thiese new students. 
+
+```{r}
+#Upload new data
+
+D2 <- 
+
+#Generate predicted advice for new students based on tree generated from old students
+
+D2$prediction <- predict(score_ctree, D2)
+
+``` 
+Compare the predicted advice with the actual advice that these studnts recieved. What is the difference between the observed and predicted results?
