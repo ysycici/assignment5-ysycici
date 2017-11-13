@@ -14,9 +14,9 @@ library(rpart)
 library(party)
 ```
 
-#Upload Data
+## Part I
 ```{r}
-D1 <- read.table("intelligent_tutor.csv", sep = ",", header = TRUE)
+D1 <- 
 ```
 
 ##Classification Tree
@@ -32,6 +32,8 @@ printcp(c.tree)
 post(c.tree, file = "tree.ps", title = "Session Completion Action: 1 - Ask teacher, 2 - Start new session, 3 - Give up")
 
 ```
+## Part II
+
 #Regression Tree
 
 We want to see if we can build a decision tree to help teachers decide which students to follow up with, based on students' performance in Assistments. We will create three groups ("teacher should intervene", "teacher should monitor student progress" and "no action") based on students' previous use of the system and how many hints they use. To do this we will be building a decision tree using the "party" package. The party package builds decision trees based on a set of statistical stopping rules.
@@ -71,4 +73,5 @@ D2 <-
 D2$prediction <- predict(score_ctree, D2)
 
 ``` 
+## Part III
 Compare the predicted advice with the actual advice that these studnts recieved. What is the difference between the observed and predicted results?
